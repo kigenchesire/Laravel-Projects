@@ -55,6 +55,12 @@ button:hover {
     <p>You are logged in</p>
     <form action="/logout" method="POST">
         @csrf
+        <form action="/create-posts" method="POST">
+            @csrf
+            <input type="text" name="title" placeholder="Title of the Post">
+         <textarea name="body" placeholder="Body of the post"></textarea></br></br>
+            <button>Create</button>
+        </form>
         <button>Logout </button>
     </form>
     @else
