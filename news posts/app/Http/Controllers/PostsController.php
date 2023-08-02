@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -16,6 +17,7 @@ class PostsController extends Controller
         $incomingFields['user_id'] = auth()->id();
 
         Post::create($incomingFields);
+        return redirect('/');
 
     }
 }
