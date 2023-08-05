@@ -57,12 +57,20 @@ button:hover {
         @csrf
         <button>Logout </button>
     </form>
+
     <form action="/create-posts" method="POST">
         @csrf
         <input type="text" name="title" placeholder="Title of the Post">
      <textarea name="body" placeholder="Body of the post"></textarea></br></br>
         <button>Create</button>
     </form>
+    <div class="container">
+        <h1>Posts</h1>
+        @foreach($userPost as $post)
+        <h3>{{$post['title']}}</h3>
+        <p>{{$post['body']}}</p>
+        @endforeach
+    </div>
     @else
     <div class="container">
         <h2>Register</h2>
@@ -82,6 +90,13 @@ button:hover {
             <input type="password" name="loginpassword" placeholder="Password">
             <button>Login</button>
         </form>
+    </div>
+    <div class="container">
+        <h1>Posts</h1>
+        @foreach($posts as $post)
+        <h3>{{$post['title']}}</h3>
+        <p>{{$post['body']}}</p>
+        @endforeach
     </div>
     @endauth
 </body>

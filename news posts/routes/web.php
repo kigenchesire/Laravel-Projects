@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostsController;
@@ -16,7 +17,14 @@ use App\Http\Controllers\PostsController;
 */
 
 Route::get('/', function () {
-    return view('home');
+  
+
+    $userPost = Post::where('user_id',auth()->id());
+     
+    
+    $posts = Post:: all();
+    return view('home', ['posts' => $posts,'userPost' => $userPost]);
+
 });
 Route::post('/register',[UserController::class, 'register']);
 
