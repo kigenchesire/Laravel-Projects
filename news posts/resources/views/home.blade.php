@@ -73,7 +73,7 @@ button:hover {
     </div>
     @else
     <div class="container">
-        <h2>Register</h2>
+        <h2>Register new user </h2>
         <form action="/register" method="POST">
             @csrf
             <input type="text" name="name" placeholder="Name">
@@ -83,7 +83,7 @@ button:hover {
         </form>
     </div>
     <div class="container">
-        <h2>Login</h2>
+        <h2>Sign In</h2>
         <form action="/login" method="POST">
             @csrf
             <input type="email" name="loginemail" placeholder="Email">
