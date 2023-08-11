@@ -77,97 +77,83 @@
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Success in your Revision</h5>
-                    <h1 class="mb-5">Past Papers </h1>
+                    <h1 class="mb-5">Past </h1>
                 </div>
                 <div class="row g-4">
-                       @php
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <h1>Hello world</h1>
+                        @php
                         $semester = App\Models\Semester::all();
                         @endphp
-                        @foreach($semester as $sem)
-                        @if ($sem->name=='Semester 1.1')
                         
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <a href="{{ url ($sem->slug)}}">
+                        @foreach($semester as $sem)
+                        <a href="{{ url ('pastpapers/'. $sem->slug)}}">
                             <div class="service-item rounded pt-3">
                                 <div class="p-4">
-                                    <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>       
-                                    <h5>{{$sem->name}}</h5> 
+                                    <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+                                    <h5>{{$sem->name}}</h5>
                                     <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                                 </div>
                             </div> </a>
-
-                                    
-
+                      
+                        @endforeach
+                       
                     </div>
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        @elseif ($sem->name=='Semester 1.2')
-                        <a href="{{ url ($sem->slug)}}">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
                                 <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
                                 <h5>Semester 1.2</h5>
                                 <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                             </div>
-                        </div></a>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        @elseif ($sem->name=='Semester 2.1')
-                        <a href="'pastpapers/' {{ url ($sem->slug)}}">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
                                 <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
                                 <h5>Semester 2.1</h5>
                                 <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                             </div>
-                        </div></a>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        @elseif ($sem->name=='Semester 2.2')
-                        <a href="{{ url ( $sem->slug)}}">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
                                 <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
                                 <h5>Semester 2.2</h5>
                                 <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                             </div>
-                        </div></a>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        @elseif ($sem->name=='Semester 3.1')
-                        <a href="{{ url ($sem->slug)}}">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
                                 <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
                                 <h5>Semester 3.1</h5>
                                 <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                             </div>
-                        </div></a>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        @elseif ($sem->name=='Semester 3.2')
-                        <a href="{{ url ( $sem->slug)}}">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
                                 <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
                                 <h5>Semester 3.2</h5>
                                 <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                             </div>
-                        </div></a>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        @elseif ($sem->name=='Semester 4.1')
-                        <a href="{{ url ($sem->slug)}}">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
                                 <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
                                 <h5>Semester 4.1</h5>
                                 <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
                             </div>
-                        </div></a>
+                        </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        @elseif ($sem->name=='Semester 4.2')
-                        <a href="{{ url ( $sem->slug)}}">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
                                 <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
@@ -176,14 +162,9 @@
                             </div>
                         </div>
                     </div>
-                    @else
-                    <h1>ERROR!!</h1>  
-                    @endif 
-                    @endforeach
                 </div>
             </div>
         </div>
- 
         <!-- Service End -->
         
 
