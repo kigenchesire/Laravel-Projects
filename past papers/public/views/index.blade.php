@@ -8,7 +8,3 @@
 <a href="#"><span class="v6_42">Bsc CS</span></a>
 
 <div class="v6_45"></div>
-<span class="v6_46">Semester 1.1Units:</span>
-<div class="v6_47"></div><div class="v6_48"></div><span class="v6_49">Semester 1.2 Units:</span>
-<div class="v6_50"></div><div class="v6_51"></div><span class="v6_52">Semester 2.1 Units:</span>
-\
