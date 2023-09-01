@@ -6,8 +6,7 @@
 <a><span class="v6_39">Links</span></a>
 <a href="#"><span class="v6_40">Home</span></a>
 <a href="#"><span class="v6_42">Bsc CS</span></a>
-<a href=""><span class="v6_41">Contacts</span></a>
-<a href=""><span class="v6_43">Course Semesters</span></a>
+
 <div class="v6_45"></div>
 <span class="v6_46">Semester 1.1Units:</span>
 <div class="v6_47"></div><div class="v6_48"></div><span class="v6_49">Semester 1.2 Units:</span>
